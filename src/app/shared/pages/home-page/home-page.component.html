@@ -1,0 +1,105 @@
+<app-nav></app-nav>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-8 pt-20 pb-32 grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <span class="inline-block px-4 py-1 rounded-full bg-brand-lime text-xs font-bold uppercase tracking-widest mb-6">
+                Red de Pensamiento Crítico
+            </span>
+            <h1 class="text-6xl md:text-7xl font-extrabold leading-tight mb-6">
+                Donde el <span class="text-brand-blue">conocimiento</span> hace sinapsis.
+            </h1>
+            <p class="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
+                Publica investigaciones profundas, reseñas culturales y artículos tecnológicos en un espacio diseñado para la claridad y el impacto intelectual.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-brand-blue cursor-pointer text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2">
+                    Crear mi Blog 
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button routerLink="/explore" class="bg-white border-2 cursor-pointer border-gray-100 px-8 py-4 rounded-xl font-bold text-lg hover:border-brand-blue transition-all">
+                    Explorar artículos
+                </button>
+            </div>
+
+            <div class="mt-12 flex items-center gap-6">
+                <div class="flex -space-x-3">
+                    <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-200"></div>
+                    <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
+                    <div class="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
+                </div>
+                <p class="text-sm text-gray-500 font-medium">Únete a +2,000 investigadores y creadores</p>
+            </div>
+        </div>
+
+        <!-- Visual / Tarjetas -->
+        <div class="relative lg:block">
+            <div class="absolute -top-10 -left-10 w-64 h-64 bg-brand-lime rounded-full blur-3xl opacity-20"></div>
+            <div class="relative grid grid-cols-2 gap-4">
+                <!-- Tarjeta 1 -->
+                <div class="bg-white p-6 rounded-3xl shadow-xl border border-gray-50 floating" style="animation-delay: 0s;">
+                    <div class="w-12 h-12 bg-brand-blue rounded-2xl mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"><path d="M18.5 15h-13"/><path stroke-linecap="round" d="M16 4H8m1 .5v5.76a2 2 0 0 1-.481 1.302L3.48 17.438A2 2 0 0 0 3 18.74V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-.26a2 2 0 0 0-.482-1.302l-5.036-5.876A2 2 0 0 1 15 10.26V4.5m-3 4.51l.01-.011M11 2.01l.01-.011"/></g>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Investigación</h3>
+                    <p class="text-gray-500 text-sm">Métodos científicos y hallazgos recientes.</p>
+                </div>
+                <!-- Tarjeta 2 -->
+                <div class="bg-white p-6 rounded-3xl shadow-xl border border-gray-50 mt-12 floating" style="animation-delay: 0.5s;">
+                    <div class="w-12 h-12 bg-brand-lime rounded-2xl mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg"  class="h-6 w-6 text-brand-blue"  viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0M3 6v13m9-13v13m9-13v13"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Crítica</h3>
+                    <p class="text-gray-500 text-sm">Análisis profundo de libros y cine.</p>
+                </div>
+                <!-- Tarjeta 3 -->
+                <div class="bg-white p-6 rounded-3xl shadow-xl border border-gray-50 floating" style="animation-delay: 1s;">
+                    <div class="w-12 h-12 bg-brand-blue rounded-2xl mb-4 flex items-center justify-center opacity-80">
+                        <svg xmlns="http://www.w3.org/2000/svg"  class="h-6 w-6 text-white" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 8l-4 4l4 4m10-8l4 4l-4 4M14 4l-4 16"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2">Tecnología</h3>
+                    <p class="text-gray-500 text-sm">El futuro del desarrollo y la IA.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Propósito -->
+    <section class="bg-gray-50 py-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">¿Por qué Synap?</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Creemos en el contenido de valor, en la profundidad de las ideas y en la elegancia de la simplicidad.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                    <span class="text-4xl mb-6 block">🔬</span>
+                    <h4 class="font-bold text-xl mb-3">Enfoque Educativo</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm">Herramientas diseñadas para que tus explicaciones sean claras y tus investigaciones lleguen a quienes las necesitan.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                    <span class="text-4xl mb-6 block">🎬</span>
+                    <h4 class="font-bold text-xl mb-3">Curaduría Cultural</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm">No es solo una reseña, es un análisis. Un espacio para los amantes del detalle en libros y películas.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-all">
+                    <span class="text-4xl mb-6 block">⚡</span>
+                    <h4 class="font-bold text-xl mb-3">Minimalismo Moderno</h4>
+                    <p class="text-gray-600 leading-relaxed text-sm">Sin distracciones. La interfaz desaparece para que lo único que importe sean tus palabras.</p>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <!-- Footer / CTA Final -->
+     <app-footer></app-footer>
+    

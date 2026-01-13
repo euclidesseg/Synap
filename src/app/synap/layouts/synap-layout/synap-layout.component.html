@@ -1,0 +1,56 @@
+<section class="flex flex-col h-screen">
+  <!-- NAVBAR -->
+  <nav class="bg-neutral-primary border-b border-slate-4 00">
+    <app-tob-bar>
+    </app-tob-bar>
+  </nav>
+
+  <!-- BODY -->
+  <div class="flex flex-1 overflow-hidden">
+    <aside class="w-72 relative bg-white border-r border-slate-400 z-1 transform transition-transform duration-300 ease-in-out
+        md:translate-x-0 shadow-lg md:shadow-none">
+      <!-- menú --> 
+      <button class="w-10 h-10 cursor-pointer rounded-full border border-black p-2 absolute -right-5 top-6 z-20">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 bg-white" viewBox="0 0 24 24">
+          <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2" d="M5 7h14M5 12h14M5 17h14" />
+        </svg>
+    </button>
+    <div class="p-8 h-full flex flex-col">
+      <nav class="flex-1 space-y-2">
+        @for (category of categories(); track category.id) {
+        <button
+          class="w-full flex hover:bg-brand-lime/20 hover:text-brand-blue items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 text-sm"
+          [routerLink]="[category.url]" routerLinkActive="!bg-brand-blue !text-white"
+          [routerLinkActiveOptions]="{exact:true}">
+          <span>
+            <i class="{{category.icon}}"></i>
+          </span>
+          {{category.name}}
+        </button>
+        }
+      </nav>
+
+      <div class="border-t border-gray-100">
+        <div class="bg-[#d2ec3d] p-4 rounded-xl relative overflow-hidden group cursor-pointer">
+          <div class="relative z-10">
+            <p class="text-brand-blue  font-bold text-sm mb-1">¿Quieres publicar?</p>
+            <p class="text-brand-blue text-xs mb-3">Envía tu investigación o artículo.</p>
+            <button class="text-xs font-bold bg-white text-brand-blue  px-3 py-1.5 rounded-lg shadow-sm">
+              Ver Guía
+            </button>
+          </div>
+          <div
+            class="absolute -right-4 -bottom-4 w-20 h-20 bg-white/30 rounded-full group-hover:scale-110 transition-transform">
+          </div>
+        </div>
+      </div>
+    </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 overflow-y-auto py-4 px-16">
+      <router-outlet></router-outlet>
+    </main>
+
+  </div>
+</section>

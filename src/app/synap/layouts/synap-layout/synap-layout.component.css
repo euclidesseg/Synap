@@ -1,0 +1,9 @@
+.nav-bar{
+    height: 4rem;
+}
+.container-aside{
+    height: calc(100% - 4rem);
+}
+.container-aside aside{
+    height: 100%;
+}
