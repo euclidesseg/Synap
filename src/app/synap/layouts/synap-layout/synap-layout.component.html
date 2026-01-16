@@ -1,7 +1,7 @@
 <section class="flex flex-col h-screen">
   <!-- NAVBAR -->
   <nav class="bg-neutral-primary border-b border-slate-400">
-    <app-tob-bar>
+    <app-tob-bar (toogleSidebarEmit)="toggleSidebar()">
     </app-tob-bar>
   </nav>
 
@@ -9,9 +9,11 @@
   <div class="flex-1 overflow-hidden relative z-1">
     <aside
       class="
+
         absolute top-0 left-0 z-20
         h-full w-72
         border-r
+        border-slate-400
         bg-white
         shadow-lg md:shadow-none
         transform
@@ -23,11 +25,14 @@
 
       <button 
         class="w-10 h-10 
+        hidden
+        lg:block
         cursor-pointer 
-        rounded-full 
+        rounded-full
+        bg-white
         border border-black 
         p-2 absolute -right-5 top-6 z-20"
-        (click)="sidebarToogle()"
+        (click)="toggleSidebar()"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 bg-white" viewBox="0 0 24 24">
           <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2" d="M5 7h14M5 12h14M5 17h14" />
@@ -78,7 +83,7 @@
       "
     >
 
-      <main class="w-full">
+      <main class="w-full max-w-screen-lg">
         <router-outlet></router-outlet>
       </main>
 

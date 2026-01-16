@@ -41,9 +41,31 @@ export default class SynapLayoutComponent {
   ]
   )
 
-  sidebarToogle(){
-    console.log('toogle')
-    this.sidebarOpen.update(v => !v);
+
+  readonly LG_BREAKPOINT = 1024; // Tailwind lg
+
+  ngOnInit() {
+    this.syncSidebarWithScreen();
+    window.addEventListener('resize', this.syncSidebarWithScreen);
   }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.syncSidebarWithScreen);
+  }
+
+  toggleSidebar() {
+    // Solo permite toggle en mobile
+    if (window.innerWidth < this.LG_BREAKPOINT) {
+      this.sidebarOpen.update(v => !v);
+    }
+  }
+
+  private syncSidebarWithScreen = () => {
+    if (window.innerWidth >= this.LG_BREAKPOINT) {
+      this.sidebarOpen.set(true);
+    } else {
+      this.sidebarOpen.set(false);
+    }
+  };
 
 }
