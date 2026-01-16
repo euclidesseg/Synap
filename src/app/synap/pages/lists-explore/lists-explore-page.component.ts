@@ -58,7 +58,7 @@ export default class ListsExplorePageComponent {
       category: "tech",
       date: "05 Oct 2023",
       readTime: "6 min",
-      image: "https://images.unsplash.com/photo-1507842217121-9d5974d5507e?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1692576735072-a317af931b24?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       author: "Carlos D."
     },
     {
@@ -68,7 +68,7 @@ export default class ListsExplorePageComponent {
       category: "research",
       date: "01 Oct 2023",
       readTime: "7 min",
-      image: "https://images.unsplash.com/photo-1555685812-4b943f3db990?q=80&w=800&auto=format&fit=crop",
+      image: "https://images.unsplash.com/photo-1531353826977-0941b4779a1c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       author: "Lucía F."
     },
     {

@@ -1,4 +1,4 @@
-<div class="relative rounded-3xl overflow-hidden bg-[#244ef7] text-white p-8 md:p-12 shadow-xl shadow-blue-900/10">
+<div class="relative rounded-xl overflow-hidden bg-[#244ef7] text-white p-8 md:p-12 shadow-xl shadow-blue-900/10 mb-10">
     <div class="relative z-10 md:w-2/3"><span
             class="inline-block px-3 py-1 bg-[#d2ec3d] text-[#244ef7] font-bold text-xs rounded-full mb-4">Destacado de
             la Semana</span>
@@ -15,204 +15,56 @@
     <div class="absolute bottom-0 left-20 w-32 h-32 bg-[#d2ec3d]/30 rounded-full blur-2xl"></div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    @for (post of posts(); track post.id) {
+        <article
+        class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 flex flex-col h-full">
+            <div 
+            class="h-48 overflow-hidden relative">
+                <div 
+                class="absolute top-4 left-4 z-10">
+                    <span
                     class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Investigación</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="El impacto de la IA en el aprendizaje autodidacta"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>12 Oct 2023</span><span>•</span><span>5 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                El impacto de la IA en el aprendizaje autodidacta</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Analizamos cómo las herramientas
-                generativas están cambiando la forma en que los estudiantes abordan la investigación y la síntesis de
-                información.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Sofía M.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                </div>
+                <img
+                    [src]="post.image"
+                    [alt]="post.title"
+                    class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+                <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
-                    class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Reseña</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="Reseña: 'Hábitos Atómicos' desde la perspectiva estudiantil"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>10 Oct 2023</span><span>•</span><span>8 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                Reseña: 'Hábitos Atómicos' desde la perspectiva estudiantil</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Más allá del hype: ¿Son realmente
-                aplicables estos consejos durante la época de exámenes finales? Ponemos a prueba el sistema.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Javier R.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
-                    class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Tips</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="Método Pomodoro vs. Flowtime: ¿Cuál es para ti?"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>08 Oct 2023</span><span>•</span><span>4 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                Método Pomodoro vs. Flowtime: ¿Cuál es para ti?</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Comparamos dos de las técnicas de gestión
-                de tiempo más populares para descubrir cuál se adapta mejor a diferentes tipos de cerebros.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Ana P.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
-                    class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Tech</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1507842217121-9d5974d5507e?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="La evolución de las bibliotecas digitales"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>05 Oct 2023</span><span>•</span><span>6 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                La evolución de las bibliotecas digitales</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Un recorrido por los repositorios de
-                acceso abierto más importantes para tesistas y estudiantes de grado.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Carlos D.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
-                    class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Investigación</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1555685812-4b943f3db990?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="Neurociencia y sueño: Por qué no deberías desvelarte"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>01 Oct 2023</span><span>•</span><span>7 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                Neurociencia y sueño: Por qué no deberías desvelarte</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Explicación científica de cómo el sueño
-                consolida la memoria a largo plazo y por qué estudiar toda la noche es contraproducente.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Lucía F.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
-    <article
-        class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300 flex flex-col h-full">
-        <div class="h-48 overflow-hidden relative">
-            <div class="absolute top-4 left-4 z-10"><span
-                    class="px-3 py-1 bg-white/90 backdrop-blur-md text-[#244ef7] text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Tech</span>
-            </div><img
-                src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&amp;w=800&amp;auto=format&amp;fit=crop"
-                alt="Apps de organización para el semestre 2024"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-        </div>
-        <div class="p-6 flex flex-col flex-1">
-            <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-clock" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                </svg><span>28 Sep 2023</span><span>•</span><span>3 min lectura</span></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
-                Apps de organización para el semestre 2024</h3>
-            <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">Una lista curada de aplicaciones
-                minimalistas que te ayudarán a mantener el orden sin distraerte.</p>
-            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50"><span
-                    class="text-xs font-semibold text-gray-500">Por Esteban G.</span><button
-                    class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más<svg
-                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                        aria-hidden="true">
-                        <path d="m9 18 6-6-6-6"></path>
-                    </svg></button></div>
-        </div>
-    </article>
+                        class="lucide lucide-clock" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>{{post.date}}</span>
+                    <span>•</span>
+                    <span>{{post.readTime}}</span>
+                
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-[#244ef7] transition-colors">
+                {{post.title}}
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
+                    {{post.summary}}
+                </p>
+                <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
+                    <span class="text-xs font-semibold text-gray-500">Por {{post.author}}</span>
+                    <button class="flex items-center gap-1 text-sm font-bold text-[#244ef7] group/btn">Leer más
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-5 h-6 lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
+                            aria-hidden="true">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </article>
+    }
+    
 </div>

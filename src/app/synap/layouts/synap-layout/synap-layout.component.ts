@@ -22,6 +22,8 @@ interface Category {
 })
 export default class SynapLayoutComponent {
 
+  sidebarOpen = signal<boolean>(false);
+
   categories = signal<Category[]>([
     { id: 'all', name: 'Explorar Todo', icon: 'fa-solid fa-hashtag', url: '/explore' },
     {
@@ -38,5 +40,10 @@ export default class SynapLayoutComponent {
     },
   ]
   )
+
+  sidebarToogle(){
+    console.log('toogle')
+    this.sidebarOpen.update(v => !v);
+  }
 
 }
