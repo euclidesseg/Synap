@@ -55,9 +55,7 @@ export default class SynapLayoutComponent {
 
   toggleSidebar() {
     // Solo permite toggle en mobile
-    if (window.innerWidth < this.LG_BREAKPOINT) {
       this.sidebarOpen.update(v => !v);
-    }
   }
 
   private syncSidebarWithScreen = () => {
