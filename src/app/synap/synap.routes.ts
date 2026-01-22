@@ -7,18 +7,23 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                loadComponent: () => import('./pages/lists-explore/lists-explore-page.component')
+                loadComponent: () => import('./pages/lists-explore-page/lists-explore-page.component')
             },
             {
-                path: ':category',
-                loadComponent: () => import('./pages/lists-explore/lists-explore-page.component')
+                path: 'topic/:category', // Donde :category será 'ciencia', 'matematicas', etc.
+                loadComponent: () => import('./pages/lists-explore-page/lists-explore-page.component')
+            },
+            {
+                path: 'read/:aricle-id',
+                loadComponent: () => import('./pages/read-page/read-page.component')
             },
             {
                 path:'**',
-                redirectTo:''
+                redirectTo:'',
+                pathMatch:'full'
             }
         ]
-    }
+    },
 ];
 
 export default routes;
