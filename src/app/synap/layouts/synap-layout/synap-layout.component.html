@@ -41,15 +41,16 @@
       </button>
 
       <div class="p-8 h-full flex flex-col">
-        <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2 py-3">
-            Temas
-        </span>
-        <nav class="flex-1 space-y-2">
+        <nav class="flex-1 space-y-2 mb-4 overflow-y-auto">
+          <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider block mb-2 py-2">
+              Temas
+          </span>
           @for (topic of topics(); track topic.id) {
           <button
             class="w-full flex hover:bg-brand-lime/20 hover:text-brand-blue items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
             [routerLink]="[topic.url]" routerLinkActive="!bg-brand-blue !text-white"
-            [routerLinkActiveOptions]="{exact:true}">
+            [routerLinkActiveOptions]="{exact:true}"
+          >
             <span>
               <i class="{{topic.icon}}"></i>
             </span>
@@ -57,7 +58,7 @@
           </button>
           }
           <hr class="text-slate-300">
-          <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4 py-3">Recursos</span>
+          <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider block mb-2 py-2">Recursos</span>
 
            @for (resource of resources(); track resource.id) {
             <button

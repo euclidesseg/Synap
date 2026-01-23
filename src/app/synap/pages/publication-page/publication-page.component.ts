@@ -1,26 +1,18 @@
 import { Component, signal } from '@angular/core';
+import { PublicationListComponent } from "../../components/publication-list/publication-list.component";
+import { Publication } from '../../interfaces/publication.interface';
 
-interface Post {
-  id: number;
-  title: string;
-  summary: string;
-  category: string;
-  date: string;
-  readTime: string;
-  image: string;
-  author: string;
-}
 
 
 
 @Component({
   selector: 'app-lists-explore',
-  imports: [],
-  templateUrl: './lists-explore-page.component.html',
+  imports: [PublicationListComponent],
+  templateUrl: './publication-page.component.html',
 })
-export default class ListsExplorePageComponent {
+export default class PublicationPageComponent {
 
-  posts = signal<Post[]>([
+  publications = signal<Publication[]>([
     {
       id: 1,
       title: "El impacto de la IA en el aprendizaje autodidacta",

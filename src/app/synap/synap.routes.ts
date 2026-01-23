@@ -7,15 +7,15 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                loadComponent: () => import('./pages/lists-explore-page/lists-explore-page.component')
+                loadComponent: () => import('./pages/publication-page/publication-page.component')
             },
             {
                 path: 'topic/:category', // Donde :category será 'ciencia', 'matematicas', etc.
-                loadComponent: () => import('./pages/lists-explore-page/lists-explore-page.component')
+                loadComponent: () => import('./pages/publication-page/publication-page.component')
             },
             {
                 path: 'read/:aricle-id',
-                loadComponent: () => import('./pages/read-page/read-page.component')
+                loadComponent: () => import('./pages/publication-detail-page/publication-detail-page.component')
             },
             {
                 path:'**',

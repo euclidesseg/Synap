@@ -1,0 +1,14 @@
+<app-prominent-component></app-prominent-component>
+
+<section class="flex flex-row gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-8">
+        @for (publication of publications(); track publication.id) {
+            <app-publication-component [publication]="publication" ></app-publication-component>
+        }
+    </div>
+     <div class="right-sidebar hidden xl:block min-w-0 w-150 h-36 bg-slate-300 sticky -top-3 rounded-lg">
+        <aside>
+
+        </aside>
+      </div>
+</section>
