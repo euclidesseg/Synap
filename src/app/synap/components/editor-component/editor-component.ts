@@ -1,8 +1,13 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
+import {EuclidesEditorComponent} from 'euclides-editor'
 
 @Component({
   selector: 'editor-component',
-  imports: [],
+  imports: [EuclidesEditorComponent],
   templateUrl: './editor-component.html',
 })
-export class EditorComponent { }
+export class EditorComponent {
+
+  editor = viewChild(EuclidesEditorComponent)
+
+ }
