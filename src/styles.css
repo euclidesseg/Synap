@@ -4,11 +4,11 @@
 @theme {
     --color-brand-blue: #244ef7;
     --color-brand-lime: #d5ee3c;
+    --color-brand-light: #f1f5f9;
     --font-sans: "Inter", sans-serif;
 }
 body {
+    height: 100vh;
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
     color: #1a1a1a;
-    overflow-x: hidden;
 }

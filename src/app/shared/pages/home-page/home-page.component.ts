@@ -1,10 +1,10 @@
 import {Component } from '@angular/core';
-import { FooterComponent } from "../../components/footer-component/footer.component";
+import { FooterComponent } from "../../components/footer/footer.component";
 import { RouterLink } from "@angular/router";
-import { NavComponent } from '../../components/nav-component/nav.component';
+import { NavBarComponent } from '../../components/navbar/navbar.component';
 
 @Component({
-  imports: [FooterComponent, NavComponent, RouterLink],
+  imports: [FooterComponent, NavBarComponent, RouterLink],
   templateUrl: './home-page.component.html',
   styles:`
     .floating {

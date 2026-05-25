@@ -35,7 +35,7 @@ export default class SynapLayoutComponent {
   { id: 'science', name: 'Ciencia', icon: 'fa-solid fa-microscope', url: '/explore/topic/ciencia' },
   { id: 'cinema', name: 'Cine', icon: 'fa-solid fa-film', url: '/explore/topic/cine' },
   { id: 'math', name: 'Matemáticas', icon: 'fa-solid fa-calculator', url: '/explore/topic/matematicas' },
-  { id: 'eng', name: 'Ingeniería', icon: 'fa-solid fa-gears', url: '/explore/topic/ingenieria' },
+  { id: 'soft', name: 'Software', icon: 'fa-solid fa-code', url: '/explore/topic/software' },
 ]);
 
   resources = signal<Resource[]>([
