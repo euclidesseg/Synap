@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import EditPageComponent from './synap/pages/edit-page/edit-page.component';
 
 export const routes: Routes = [
     {
@@ -14,6 +13,10 @@ export const routes: Routes = [
     {
         path: 'edit',
         loadComponent: () => import('./synap/pages/edit-page/edit-page.component')
+    },
+    {
+        path:'auth',
+        loadChildren: () => import('./auth/auth.routes')
     },
 
     {

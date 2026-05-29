@@ -1,48 +1,56 @@
- <article
-            class="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-xl hover:shadow-brand-blue/10 transition-all duration-300 flex flex-col h-full">
-                <div 
-                class="h-48 overflow-hidden relative">
-                    <div 
-                    class="absolute top-4 left-4 z-10">
-                        <span
-                        class="px-3 py-1 bg-white/90 backdrop-blur-md text-brand-blue text-xs font-bold rounded-full border border-blue-100 uppercase tracking-wide">Investigación</span>
+<article class="md:col-span-2">
+    <div class="bg-white border border-slate-200 flex flex-col md:flex-row min-h-[200px] rounded-md overflow-hidden">
+        <div class="bg-brand-slate text-white p-8 md:w-1/3 flex flex-col justify-between">
+            <div>
+                <app-icon name="science" class="w-16 h-16 block"></app-icon>
+                <h3 class="text-xl font-serif italic mb-2">Resumen de introducción</h3>
+                <p class="text-xs text-slate-400 leading-loose">
+                    Este estudio aporta evidencia de coherencia cuántica de largo alcance en superconductores de cuprato
+                    a temperaturas superiores a 150 K. Mediante dispersión de neutrones y modelado computacional,
+                    determinamos la topología de la función de onda.
+                </p>
+            </div>
+            <div class="mt-8">
+                <span class="text-[10px] tracking-widest text-slate-500 block mb-1">CORRESPONDING AUTHOR</span>
+                <span class="text-xs font-medium">e.vance@physics.edu</span>
+            </div>
+        </div>
+        <div class="p-8 md:w-2/3 flex flex-col justify-center">
+            <span class="text-[12px] font-bold text-blue-600 mb-2 tracking-widest uppercase">Advanced Physics
+                Quarterly</span>
+            <h3 class="text-3xl font-light text-slate-800 mb-4 leading-tight">
+                Quantum Entanglement in
+                High-Temperature Superconductors: A Multi-Scale Analysis
+            </h3>
+            <div class="flex flex-wrap gap-y-4 gap-x-12 mt-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-slate-100 rounded-lg"> <app-icon name="user" class="w-8 h-8 block"></app-icon>
                     </div>
-                    <img
-                        [src]="publication().image"
-                        [alt]="publication().title"
-                        class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="p-6 flex flex-col flex-1">
-                    <div class="flex items-center gap-2 text-gray-400 text-xs font-medium mb-3">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-clock" aria-hidden="true">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        <span>{{publication().date}}</span>
-                        <span>•</span>
-                        <span>{{publication().readTime}}</span>
-                    
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 leading-snug group-hover:text-brand-blue transition-colors">
-                    {{publication().title}}
-                    </h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
-                        {{publication().summary}}
-                    </p>
-                    <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
-                        <span class="text-xs font-semibold text-gray-500">Por {{publication().author}}</span>
-                        <button class="flex items-center gap-1 text-sm font-bold text-brand-blue group/btn py-2 px-3 border border-brand-blue/20 rounded-full ">Leer más
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="w-5 h-6 lucide lucide-chevron-right transform group-hover/btn:translate-x-1 transition-transform"
-                                aria-hidden="true">
-                                <path d="m9 18 6-6-6-6"></path>
-                            </svg>
-                        </button>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Autor</p>
+                        <p class="text-sm font-medium">Euclides Pérez</p>
                     </div>
                 </div>
-            </article>
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-slate-100 rounded-lg flex">
+                        <app-icon name="calendar" class="w-8! h-8!"></app-icon>
+                    </div>
+                    <div>
+                        <p class="text-[10px] text-slate-400 uppercase font-bold">Publicación</p>
+                        <p class="text-sm font-medium">2025-02-05</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 flex gap-4">
+                <a href="#"
+                    class="px-6 py-2 bg-slate-900 text-white text-xs font-bold tracking-widest uppercase hover:bg-slate-800 transition-all">
+                    Leer Artículo
+                </a>
+                <button
+                    class="px-6 py-2 border border-slate-200 text-slate-600 text-xs font-bold tracking-widest uppercase hover:bg-slate-50 transition-all">
+                    Exportar cita
+                </button>
+            </div>
+        </div>
+    </div>
+</article>

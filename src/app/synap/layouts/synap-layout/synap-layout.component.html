@@ -7,8 +7,7 @@
 
   <!-- BODY -->
   <div class="flex-1 overflow-hidden relative z-1">
-    <aside
-      class="
+    <aside class="
 
         absolute top-0 left-0 z-20
         h-full w-72
@@ -18,23 +17,17 @@
         shadow-lg md:shadow-none
         transform
         transition-transform duration-300 ease-in-out
-      "
-      [class.-translate-x-full]="!sidebarOpen()"
-      [class.lg:-translate-x-[90%]]="!sidebarOpen()"
-      [class.translate-x-0]="sidebarOpen()"
-    >
+      " [class.-translate-x-full]="!sidebarOpen()" [class.lg:-translate-x-[90%]]="!sidebarOpen()"
+      [class.translate-x-0]="sidebarOpen()">
 
-      <button 
-        class="w-10 h-10 
+      <button class="w-10 h-10 
         hidden
         lg:block
         cursor-pointer 
         rounded-full
         bg-white
         border border-slate-400 
-        p-2 absolute -right-5 top-6 z-20"
-        (click)="toggleSidebar()"
-      >
+        p-2 absolute -right-5 top-6 z-20" (click)="toggleSidebar()">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 bg-white" viewBox="0 0 24 24">
           <path fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.2" d="M5 7h14M5 12h14M5 17h14" />
         </svg>
@@ -43,14 +36,13 @@
       <div class="p-8 h-full flex flex-col">
         <nav class="flex-1 space-y-2 mb-4 overflow-y-auto">
           <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider block mb-2 py-2">
-              Temas
+            Temas
           </span>
           @for (topic of topics(); track topic.id) {
           <button
-            class="w-full flex hover:bg-brand-lime/20 hover:text-brand-blue items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
-            [routerLink]="[topic.url]" routerLinkActive="!bg-brand-blue !text-white"
-            [routerLinkActiveOptions]="{exact:true}"
-          >
+            class="w-full flex hover:bg-brand-lime/20 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
+            [routerLink]="[topic.url]" routerLinkActive="!bg-brand-slate !text-white"
+            [routerLinkActiveOptions]="{exact:true}">
             <span>
               <i class="{{topic.icon}}"></i>
             </span>
@@ -60,51 +52,46 @@
           <hr class="text-slate-300">
           <span class="text-xs font-semibold text-gray-600 uppercase tracking-wider block mb-2 py-2">Recursos</span>
 
-           @for (resource of resources(); track resource.id) {
-            <button
-              class="w-full flex hover:bg-brand-lime/20 hover:text-brand-blue items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
-              [routerLink]="[resource.url]" routerLinkActive="!bg-brand-blue !text-white"
-              [routerLinkActiveOptions]="{exact:true}">
-              <span>
-                <i class="{{resource.icon}}"></i>
-              </span>
-              {{resource.name}}
-            </button>
+          @for (resource of resources(); track resource.id) {
+          <button
+            class="w-full flex hover:bg-brand-lime/20 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
+            [routerLink]="[resource.url]" routerLinkActive="!bg-brand-slate !text-white"
+            [routerLinkActiveOptions]="{exact:true}">
+            <span>
+              <i class="{{resource.icon}}"></i>
+            </span>
+            {{resource.name}}
+          </button>
           }
         </nav>
 
         <div class="border-t border-gray-100">
-          <div class="bg-[#d2ec3d] p-4 rounded-xl relative overflow-hidden group cursor-pointer">
+          <div class="bg-brand-lime p-4 rounded-lg relative overflow-hidden group cursor-pointer">
             <div class="relative z-10">
-              <p class="text-brand-blue  font-bold text-sm mb-1">¿Quieres publicar?</p>
-              <p class="text-brand-blue text-xs mb-3">Envía tu investigación o artículo.</p>
-              <button routerLink="/edit" class="text-xs font-bold bg-white text-brand-blue  px-3 py-1.5 rounded-lg shadow-sm">
-                Ver Guía
-              </button>
+              <p class="text-brand-slate  font-bold text-sm mb-1">¿Quieres publicar?</p>
+              <p class="text-brand-slate text-xs mb-3 font-semibold">Envía tu investigación o artículo.</p>
+              <a routerLink="/edit" class="text-xs font-bold bg-white text-brand-slate  px-3 py-1.5 shadow-sm">
+                {{'Ver Guía' | uppercase}}
+              </a>
             </div>
             <div
-              class="absolute -right-4 -bottom-4 w-20 h-20 bg-white/30 rounded-full group-hover:scale-110 transition-transform">
+              class="absolute -right-4 -bottom-4 w-20 h-20 bg-brand-light/70 rounded-full group-hover:scale-110 transition-transform">
             </div>
           </div>
         </div>
       </div>
     </aside>
 
-    <div
-      class="
+    <div class="
         h-full
         absolute top-0 left-0 right-0 bottom-0 z-10
         flex flex-row justify-center gap-4
         overflow-y-auto
         py-4 px-4 md:px-12 lg:px-16
-        mb-6
-        transition transition-all duration-300 ease-in-out
-      "
-      [class.ml-0]="!sidebarOpen()"
-      [class.lg:ml-72]="sidebarOpen()"
-      >
+        mb-6 transition-all duration-300 ease-in-out
+      " [class.ml-0]="!sidebarOpen()" [class.lg:ml-72]="sidebarOpen()">
 
-      <main class="w-full max-w-screen-lg">
+      <main class="w-full max-w-5xl">
         <router-outlet></router-outlet>
       </main>
     </div>

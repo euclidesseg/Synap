@@ -2,13 +2,14 @@
 @plugin "daisyui";
 
 @theme {
+    --color-brand-slate: #0f172b;
     --color-brand-blue: #244ef7;
     --color-brand-lime: #d5ee3c;
-    --color-brand-light: #f1f5f9;
+    --color-brand-light: #fbfcff;
     --font-sans: "Inter", sans-serif;
 }
+
 body {
-    height: 100vh;
     font-family: 'Inter', sans-serif;
     color: #1a1a1a;
 }

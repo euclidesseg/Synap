@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { PublicationListComponent } from "../../components/publication-list/publication-list.component";
+import { PublicationListComponent } from "../../components/publication-list-component/publication-list.component";
 import { Publication } from '../../interfaces/publication.interface';
 
 

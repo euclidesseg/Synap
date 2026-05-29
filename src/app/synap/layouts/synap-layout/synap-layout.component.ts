@@ -1,6 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
-import { TobBarComponent } from '../../components/tob-bar.component/tob-bar.component';
+import { TopBarComponent } from '../../components/top-bar-component/top-bar.component';
+import { UpperCasePipe } from '@angular/common';
 
 interface Topic {
   id: string;
@@ -21,7 +22,8 @@ interface Resource {
     RouterOutlet,
     RouterLinkWithHref,
     RouterLinkActive,
-    TobBarComponent
+    TopBarComponent,
+    UpperCasePipe
   ],
   styleUrl: './synap-layout.component.css',
   templateUrl: './synap-layout.component.html',

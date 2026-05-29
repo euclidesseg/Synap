@@ -1,0 +1,54 @@
+<section class="min-h-screen flex items-center justify-center bg-brand-light p-4"
+    style="background-image: url('assets/images/nebulosa.jpg'); background-size:cover">
+    <div
+        class="w-full max-w-5xl bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-170 border border-gray-100">
+
+        <!-- PANEL IZQUIERDO -->
+        <div class="w-full md:w-1/2 bg-white">
+            <router-outlet />
+        </div>
+
+        <!-- PANEL DERECHO -->
+        <div
+            class="hidden md:flex flex-col justify-center gap-10 relative w-full md:w-1/2 bg-linear-to-br from-slate-900 via-[#101730] to-[#0a0f24] p-8 md:p-12 overflow-hidden text-white border-l border-slate-800">
+
+            <div class="synapse-glow -top-12 -right-12"></div>
+
+
+            <div class="relative z-10">
+                <span
+                    class="text-xs font-semibold bg-brand-lime border border-brand-blue/30 text-brand-slate px-3 py-1.5 rounded-full uppercase tracking-widest">
+                    Contenido con Propósito
+                </span>
+
+                <h3 class="text-2xl lg:text-3xl font-bold text-brand-lime mt-4 leading-tight">
+                    Donde el conocimiento hace sinapsis.
+                </h3>
+
+                <p class="text-slate-400 text-sm mt-2 max-w-sm">
+                    Usa tu tiempo para descubrir artículos enriquecedores sobre ciencia,
+                    astronomía, programación, reseñas de libros y tutoriales que de verdad
+                    te ayudan a entender el universo.
+                </p>
+            </div>
+
+            <div class="flex justify-start items-center relative z-10 w-full">
+                <div
+                    class="relative group overflow-hidden rounded-lg border border-white/10 shadow-2xl bg-slate-950/40 p-2 transition-all duration-300 w-full max-w-90 hover:border-blue-500/40 hover:shadow-blue-500/5">
+
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"
+                        alt="Conexiones neuronales"
+                        class="w-full h-48 lg:h-56 object-cover rounded-lg opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+
+                </div>
+            </div>
+
+            <div class="relative z-10 border-t border-slate-800/60 pt-6">
+                <p class="text-xs text-brand-lime leading-relaxed italic">
+                    "Un refugio digital diseñado para cambiar el ruido por el aprendizaje."
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

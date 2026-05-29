@@ -1,11 +1,12 @@
 import {Component, output } from '@angular/core';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-tob-bar',
-  imports: [],
-  templateUrl: './tob-bar.component.html',
+  imports: [RouterLink],
+  templateUrl: './top-bar.component.html',
 })
-export class TobBarComponent {
+export class TopBarComponent {
 
   toogleSidebarEmit = output();
 
