@@ -40,7 +40,7 @@
           </span>
           @for (topic of topics(); track topic.id) {
           <button
-            class="w-full flex hover:bg-brand-lime/20 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
+            class="w-full flex hover:bg-brand-lime/50 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
             [routerLink]="[topic.url]" routerLinkActive="!bg-brand-slate !text-white"
             [routerLinkActiveOptions]="{exact:true}">
             <span>
@@ -54,7 +54,7 @@
 
           @for (resource of resources(); track resource.id) {
           <button
-            class="w-full flex hover:bg-brand-lime/20 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
+            class="w-full flex hover:bg-brand-lime/50 hover:text-brand-slate items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 text-sm"
             [routerLink]="[resource.url]" routerLinkActive="!bg-brand-slate !text-white"
             [routerLinkActiveOptions]="{exact:true}">
             <span>

@@ -1,1 +1,422 @@
-<p>read-article-page works!</p>,
+
+<!-- BANNER CIENTÍFICO PRINCIPAL (HERO) -->
+<!-- Inspirado en el diseño e información de tu tarjeta original -->
+<section class="bg-white border-b border-slate-200 pb-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+
+            <!-- Panel Lateral Oscuro (Inspirado en la sección negra de tu tarjeta original) -->
+            <div
+                class="lg:col-span-4 bg-brand-slate text-white rounded-lg p-6 sm:p-8 flex-col justify-between shadow-xl relative overflow-hidden">
+                <!-- Efecto de fondo abstracto y moderno -->
+                <div
+                    class="absolute top-0 right-0 w-32 h-32 bg-linear-to-br from-blue-500/20 to-transparent rounded-full blur-2xl">
+                </div>
+
+                <div>
+                    <!-- Icono / Símbolo de la tarjeta -->
+                    <div class="mb-8 text-blue-400">
+                        <svg class="w-12 h-12" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 2L6 38H38L22 2Z" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M22 42L6 6H38L22 42Z" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+
+                    <!-- Título del resumen -->
+                    <h3 class="font-serif text-2xl font-semibold mb-4 italic text-slate-100">Resumen de introducción
+                    </h3>
+
+                    <!-- Texto del resumen del artículo -->
+                    <p class="text-sm text-slate-300 leading-relaxed font-light mb-8">
+                        Este estudio aporta evidencia de coherencia cuántica de largo alcance en superconductores de
+                        cuprato a temperaturas superiores a 150 K. Mediante dispersión de neutrones y modelado
+                        computacional, determinamos la topología de la función de onda.
+                    </p>
+                </div>
+
+                <!-- Información del autor de correspondencia -->
+                <div class="pt-6 border-t border-slate-800">
+                    <span class="text-[10px] text-slate-400 block uppercase tracking-wider font-semibold">Corresponding
+                        Author</span>
+                    <a href="mailto:e.vance@physics.edu"
+                        class="text-sm text-sky-400 font-mono hover:underline block mt-1">e.vance@physics.edu</a>
+                </div>
+            </div>
+
+            <!-- Detalles Principales del Artículo (Lado Derecho de la Tarjeta) -->
+            <div class="lg:col-span-8 flex flex-col justify-between py-2">
+                <div>
+                    <!-- Revista de publicación -->
+                    <span class="text-xs font-bold text-synapBrand tracking-wider uppercase block mb-3">ADVANCED PHYSICS
+                        QUARTERLY</span>
+
+                    <!-- Título principal -->
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-tight font-sans mb-6">
+                        Quantum Entanglement in High-Temperature Superconductors: A Multi-Scale Analysis
+                    </h1>
+                </div>
+
+                <!-- Metadatos (Autor, Fecha de Publicación) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                    <!-- Autor -->
+                    <div class="flex items-center space-x-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <div class="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center text-slate-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Autor</span>
+                            <span class="text-sm font-semibold text-slate-800">Euclides Pérez</span>
+                        </div>
+                    </div>
+
+                    <!-- Fecha de publicación -->
+                    <div class="flex items-center space-x-3 bg-slate-50 p-4 rounded-lg border border-slate-100">
+                        <div class="w-10 h-10 bg-slate-200 rounded-lg flex items-center justify-center text-slate-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span
+                                class="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">Publicación</span>
+                            <span class="text-sm font-semibold text-slate-800 font-mono">2025-02-05</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción (Inspirados en "Leer Artículo" y "Exportar Cita") -->
+                <div class="flex flex-wrap gap-3 pt-4 border-t border-slate-100">
+                    <button type="button"
+                        class="py-3 px-4 bg-brand-slate text-white font-semibold text-sm rounded-lg hover:bg-slate-800 transition-colors uppercase tracking-wider shadow-md">
+                        Iniciar Lectura Enfocada
+                    </button>
+                    <button type="button"
+                        class="px-6 py-3 border border-slate-300 text-slate-700 font-semibold text-sm rounded-lg hover:bg-slate-50 transition-colors uppercase tracking-wider">
+                        Exportar Cita (BibTeX)
+                    </button>
+                    <button type="button"
+                        class="p-3 border border-slate-300 text-slate-500 hover:text-slate-700 rounded-lg hover:bg-slate-50 transition-colors ml-auto"
+                        title="Guardar a favoritos">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CUERPO PRINCIPAL DEL ARTÍCULO (Diseño a dos columnas: Contenido + Barra de herramientas laterales) -->
+<main class="max-w-7xl mx-auto sm:px-6 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-12">
+
+        <!-- CONTENIDO PRINCIPAL DEL EDITOR (Columna izquierda) -->
+        <article class="lg:col-span-8 bg-white rounded-lg border border-slate-200/80 p-6 sm:p-10 shadow-sm">
+
+            <!-- Herramientas rápidas para la experiencia de lectura (Estilo Synap) -->
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-8 text-xs text-slate-500">
+                <div class="flex items-center space-x-2">
+                    <span>Tiempo estimado de lectura: <strong>12 minutos</strong></span>
+                    <span>•</span>
+                    <span>Categoría: <strong class="text-synapBrand">Física de Materiales</strong></span>
+                </div>
+                <!-- Acciones del lector -->
+                <div class="flex items-center space-x-3">
+                    <button type="button" class="hover:text-slate-800 transition-colors flex items-center space-x-1"
+                        title="Aumentar tamaño de letra">
+                        <span class="font-bold">A</span><span class="text-slate-400">A</span>
+                    </button>
+                    <span>|</span>
+                    <button type="button" class="hover:text-slate-800 transition-colors flex items-center space-x-1">
+                        <span>Modo Noche</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ÁREA DE CONTENIDO RENDERIZADO (Simulando la salida limpia del editor WYSIWYG) -->
+            <div class="article-content">
+
+                <!-- Párrafo introductorio destacando negrita, cursiva y enlaces -->
+                <p>
+                    El estudio de la superconductividad a temperaturas elevadas ha dado un giro inesperado.
+                    <strong>El entrelazamiento cuántico de largo alcance</strong>, tradicionalmente confinado a sistemas
+                    extremadamente aislados y de temperaturas cercanas al cero absoluto, ha sido observado en
+                    <em>superconductores de cuprato</em> a temperaturas superiores a los 150 K. Este hallazgo desafía
+                    los modelos clásicos propuestos por la teoría BCS y abre una nueva era para el diseño de
+                    dispositivos cuánticos y redes eléctricas sin pérdidas.
+                    Puedes consultar la base teórica de este fenómeno en el <a href="#" target="_blank">Portal de
+                        Cuántica Avanzada de Synap</a>.
+                </p>
+
+                <!-- Imagen ilustrativa del artículo (Inspirada en la galaxia/nebula cósmica del editor) -->
+                <div class="my-8">
+                    <div class="overflow-hidden rounded-lg border border-slate-200 shadow-sm bg-slate-900">
+                        <!-- Imagen simulada por una hermosa vista de gas ionizado de la NASA -->
+                        <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=1200"
+                            alt="Estructuras moleculares y campos cuánticos simulados"
+                            class="w-full h-80 object-cover opacity-90 hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <span class="text-xs text-slate-400 italic mt-2 block text-center">Figura 1: Simulación
+                        computacional de la densidad electrónica y coherencia de fase en un plano de
+                        cobre-oxígeno.</span>
+                </div>
+
+                <!-- Título H2 -->
+                <h2>La naturaleza de la coherencia en planos de cuprato</h2>
+
+                <p>
+                    Para descifrar cómo cooperan los electrones sin destruirse bajo los efectos térmicos, analizamos la
+                    topología tridimensional de la función de onda de los pares de Cooper. El comportamiento colectivo
+                    puede sintetizarse de la siguiente manera:
+                </p>
+
+                <!-- Lista Desordenada (Elemento común del editor) -->
+                <ul>
+                    <li><strong>Efecto Hall anómalo:</strong> Observado consistentemente en muestras purificadas a
+                        temperaturas de transición crítica ($T_c$).</li>
+                    <li><strong>Dispersión de neutrones:</strong> Mapeó de forma no destructiva la estructura
+                        cristaloquímica del superconductor.</li>
+                    <li><strong>Preservación de la fase:</strong> Los estados entrelazados demostraron una resiliencia
+                        inusual ante fluctuaciones acústicas en el lattice cristalino.</li>
+                </ul>
+
+                <!-- Cita Destacada (Blockquote) -->
+                <blockquote>
+                    "No estamos simplemente ante un estado transitorio; se trata de una fase macroscópica protegida
+                    topológicamente. Si logramos estabilizar estos acoplamientos, las computadoras cuánticas de estado
+                    sólido serán una realidad de escritorio."
+                    <span class="block text-sm font-semibold text-slate-500 mt-2">— Dr. Euclides Pérez, Investigador
+                        Principal.</span>
+                </blockquote>
+
+                <!-- Título H3 -->
+                <h3>Metodología y Procesamiento de Datos</h3>
+
+                <p>
+                    El procesamiento numérico de la función de onda cuántica fue ejecutado utilizando una arquitectura
+                    de computación heterogénea. El algoritmo de optimización variacional minimiza la energía del sistema
+                    utilizando la siguiente rutina de análisis matricial en Python:
+                </p>
+
+                <!-- Bloque de código estático del editor -->
+                <div  class="bg-slate-900 text-slate-100 rounded-lg p-5 my-6 overflow-x-auto border border-slate-800 shadow-inner">
+                    <div class="flex justify-between items-center text-xs text-slate-500 mb-3 pb-2 border-b border-slate-800">
+                        <span class="font-mono">wavefunction_analyzer.py</span>
+                        <span class="uppercase font-semibold tracking-wider text-synapAccent">Python Code</span>
+                    </div>
+                    <pre class="text-sm font-mono leading-relaxed">
+                        <code>
+                            def calculate_entanglement_entropy(state_vector, partition_size):
+                            """
+                            Calcula la entropía de entrelazamiento de von Neumann para 
+                            una partición del estado superconductor del cuprato.
+                            """
+                            reduced_density_matrix = partial_trace(state_vector, partition_size)
+                            eigenvalues = linalg.eigvalsh(reduced_density_matrix)
+                            
+                            # Entropía de von Neumann
+                            entropy = -sum([l * log2(l) for l in eigenvalues if l > 1e-12])
+                            return entropy
+                        </code>
+                    </pre>
+                </div>
+
+                <p>
+                    Los resultados preliminares muestran una correlación lineal directa entre el grado de dopaje de
+                    oxígeno en la muestra y la resistencia de los pares cuánticos frente a perturbaciones térmicas
+                    directas, lo cual validaría el modelo de entrelazamiento estructural.
+                </p>
+
+                <!-- Lista Ordenada (Elemento común del editor) -->
+                <h2>Próximos Pasos en el Desarrollo del Estudio</h2>
+                <p>
+                    El equipo de investigación de Synap ha programado las siguientes fases de desarrollo metodológico
+                    para los trimestres entrantes:
+                </p>
+                <ol>
+                    <li><strong>Sintetización química de nuevas variantes de cupratos</strong> dopados con elementos de
+                        tierras raras para evaluar cambios en la temperatura crítica ($T_c$).</li>
+                    <li><strong>Ejecución de simulaciones a microescala</strong> mediante algoritmos inspirados en IA
+                        sobre tensores cuánticos masivos.</li>
+                    <li><strong>Publicación en acceso abierto (Open Access)</strong> de todos los datos espectrométricos
+                        recopilados para fomentar la investigación abierta y colaborativa en la plataforma.</li>
+                </ol>
+
+                <p>
+                    En conclusión, el panorama de la física de la materia condensada está presenciando una metamorfosis.
+                    Dispositivos que solían ser puras hipótesis de pizarrón están cada día más cerca de redefinir las
+                    tecnologías del siglo XXI.
+                </p>
+
+            </div>
+
+            <!-- FIRMA DEL AUTOR Y AGRADECIMIENTOS -->
+            <div
+                class="mt-12 pt-8 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center space-x-3">
+                    <div
+                        class="w-12 h-12 bg-blue-100 text-synapBrand rounded-full flex items-center justify-center font-bold text-lg">
+                        EP
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-slate-800">Escrito por Euclides Pérez</h4>
+                        <p class="text-xs text-slate-500">Físico Teórico & Creador de Contenido Científico en Synap</p>
+                    </div>
+                </div>
+                <!-- Acciones rápidas del artículo -->
+                <div class="flex items-center space-x-2">
+                    <button type="button"
+                        class="text-xs font-semibold text-brand-slate bg-brand-lime px-3 py-1.5 rounded-lg transition-colors">
+                        Seguir Autor
+                    </button>
+                    <button type="button"
+                        class="text-xs font-semibold text-white bg-brand-slate px-3 py-1.5 rounded-lg transition-colors">
+                        Enviar Mensaje
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- BARRA LATERAL (Columna derecha) -->
+        <!-- Información adicional, referencias, discusión y acciones de Angular -->
+        <aside class="lg:col-span-4 space-y-6">
+
+            <!-- Tarjeta de Contribución Social (Motivación de Synap) -->
+            <div
+                class="bg-gradient-to-br from-brand-slate to-slate-900 text-white rounded-lg p-6 shadow-md relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-blue-600/20 rounded-full blur-2xl"></div>
+                <h3 class="text-lg font-bold mb-2">¿Por qué leer en Synap?</h3>
+                <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    Nacimos como una protesta contra el contenido basura de las redes sociales convencionales. Creemos
+                    en un espacio donde los jóvenes puedan nutrir su mente con ciencia, arte y código de valor real.
+                </p>
+                <div class="text-xs font-semibold text-brand-blue flex items-center space-x-1">
+                    <span>Sé parte de la revolución intelectual</span>
+                    <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Panel de Acciones y Herramientas del Lector (Preparado para lógica Angular) -->
+            <div class="bg-white rounded-lg border border-slate-200/80 p-6 shadow-sm">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Herramientas de Estudio</h4>
+
+                <div class="space-y-3">
+                    <!-- Botón de Exportación de Referencia -->
+                    <button type="button"
+                        class="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-lg text-left text-sm text-slate-700 font-medium transition-colors border border-slate-100">
+                        <span class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4">
+                                </path>
+                            </svg>
+                            <span>Descargar PDF Oficial</span>
+                        </span>
+                        <span class="text-xs text-slate-400">1.2 MB</span>
+                    </button>
+
+                    <!-- Botón de Guardado -->
+                    <button type="button"
+                        class="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-lg text-left text-sm text-slate-700 font-medium transition-colors border border-slate-100">
+                        <span class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                                </path>
+                            </svg>
+                            <span>Añadir a mi Cuaderno</span>
+                        </span>
+                        <span
+                            class="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded-full font-mono text-[10px]">Guardar</span>
+                    </button>
+
+                    <!-- Botón de Compartir Código -->
+                    <button type="button"
+                        class="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-lg text-left text-sm text-slate-700 font-medium transition-colors border border-slate-100">
+                        <span class="flex items-center space-x-3">
+                            <svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            <span>Fork Computacional</span>
+                        </span>
+                        <span class="text-xs text-slate-400">Sandbox</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Índice de Contenido dinámico para navegación -->
+            <div class="bg-white rounded-lg border border-slate-200/80 p-6 shadow-sm">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Tabla de Contenidos</h4>
+                <ul class="space-y-3 text-sm text-slate-600 list-none ml-0">
+                    <li>
+                        <a href="#" class="text-synapBrand font-medium hover:underline block">1. Resumen y Conceptos
+                            Clave</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-synapDark transition-colors block">2. Naturaleza de la Coherencia
+                            en Cupratos</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="hover:text-synapDark transition-colors block pl-4 text-slate-500 border-l border-slate-200">2.1
+                            Metodología de simulación</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="hover:text-synapDark transition-colors block pl-4 text-slate-500 border-l border-slate-200">2.2
+                            Código Wavefunction Analyzer</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:text-synapDark transition-colors block">3. Próximos pasos en la
+                            investigación</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sección de Artículos Recomendados (Para evitar que se queden sin leer) -->
+            <div class="bg-white rounded-lg border border-slate-200/80 p-6 shadow-sm">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">Lecturas Recomendadas</h4>
+                <div class="space-y-4">
+                    <!-- Recomendación 1 -->
+                    <a href="#" class="group block">
+                        <span class="text-xs font-bold text-brand-blue uppercase tracking-wider block mb-1">PROGRAMACIÓN &
+                            IA</span>
+                        <h5
+                            class="text-sm font-semibold text-slate-800 group-hover:text-synapBrand transition-colors line-clamp-2">
+                            Implementación de Redes Neuronales de Grafos para Simulación Química
+                        </h5>
+                    </a>
+                    <hr class="border-slate-100">
+                    <!-- Recomendación 2 -->
+                    <a href="#" class="group block">
+                        <span class="text-xs font-bold text-brand-lime uppercase tracking-wider block mb-1">RESEÑAS DE
+                            LIBROS</span>
+                        <h5
+                            class="text-sm font-semibold text-slate-800 group-hover:text-synapBrand transition-colors line-clamp-2">
+                            El Camino del Programador Libre: Filosofía del Código Abierto en 2026
+                        </h5>
+                    </a>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+</main>
