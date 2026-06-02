@@ -2,7 +2,7 @@ import { Component, AfterViewInit, signal, inject, Renderer2, ElementRef, OnDest
 import { EditorComponent } from "../../components/editor-component/editor-component";
 import { FormArray, FormBuilder, FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
 import { IconComponent } from "../../../shared/components/icon/icon.component";
-import { CATEGORIES } from '../../data/categories.data';
+import { categories } from '../../data/categories.data';
 import { JsonPipe } from '@angular/common';
 
 
@@ -18,7 +18,7 @@ export default class EditPageComponent implements AfterViewInit, OnDestroy {
 
   private renderer = inject(Renderer2);
   private elementRef = inject(ElementRef);
-  categoryOptions = signal(CATEGORIES)
+  categoryOptions = signal(categories)
 
   @ViewChild('inputCategory')
   inputCategory!: ElementRef<HTMLInputElement>;
@@ -57,20 +57,16 @@ export default class EditPageComponent implements AfterViewInit, OnDestroy {
 
 
   // Form control para una nueva etiqueta
-  newLabel: FormControl = new FormControl('', [Validators.minLength(2)]);
+  newLabel: FormControl = new FormControl('', [Validators.minLength(4), Validators.required]);
 
 
   // Definición del formularlio para el articulo
   articleForm = this.fBuilder.group({
-    title: ['', [Validators.required]],
+    title: ['', [Validators.required, Validators.maxLength(250)]],
+    summary:['', [Validators.required]],
     category: ['', [Validators.required]],
     visibility:['Public',[Validators.required]],
-    labels: this.fBuilder.array(
-      [
-
-      ],
-      Validators.minLength(2)
-    )
+    labels: this.fBuilder.array([ ], [Validators.minLength(2)])
   });
 
   // Obtiene loe elementos del formaray para manipularlos

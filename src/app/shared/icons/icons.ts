@@ -1,12 +1,12 @@
 export const ICONS = {
-  sum: `
+  sum:`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <path d="M0 0h24v24H0z" fill="none" />
         <path fill="currentColor" d="M5.06 4.457A.75.75 0 0 1 5.75 4h12.5a.75.75 0 0 1 0 1.5H7.52l5.36 5.539a.75.75 0 0 1 .03 1.01L7.38 18.5h10.87a.75.75 0 0 1 0 1.5H5.75a.75.75 0 0 1-.57-1.238l6.147-7.17l-6.116-6.32a.75.75 0 0 1-.152-.815" />
     </svg>
     `,
 
-  mathematic: `
+  mathematics:`
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
         <path d="M0 0h80v80H0z" fill="none" />
         <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">

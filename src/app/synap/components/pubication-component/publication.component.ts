@@ -10,4 +10,5 @@ import { IconComponent } from "../../../shared/components/icon/icon.component";
 export class PublicationComponent {  
 
   publication = input.required<Publication>();
+
 }

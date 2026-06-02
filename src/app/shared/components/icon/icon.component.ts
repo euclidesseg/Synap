@@ -11,6 +11,7 @@ import {
 } from "@angular/platform-browser";
 
 import { ICONS } from "../../icons/icons";
+import { IconName } from "../../../synap/types/icon-name.type";
 
 @Component({
   selector: 'app-icon',
@@ -27,7 +28,7 @@ export class IconComponent {
 
   private sanitizer = inject(DomSanitizer);
 
-  name = input.required<keyof typeof ICONS>();
+  name = input.required<IconName>();
 
   svg = computed<SafeHtml>(() => {
 
