@@ -62,8 +62,8 @@ export default class EditPageComponent implements AfterViewInit, OnDestroy {
 
   // Definición del formularlio para el articulo
   articleForm = this.fBuilder.group({
-    title: ['', [Validators.required, Validators.maxLength(250)]],
-    summary:['', [Validators.required]],
+    title: ['', [Validators.required]],
+    summary:['', [Validators.required, Validators.maxLength(200)]],
     category: ['', [Validators.required]],
     visibility:['Public',[Validators.required]],
     labels: this.fBuilder.array([ ], [Validators.minLength(2)])
