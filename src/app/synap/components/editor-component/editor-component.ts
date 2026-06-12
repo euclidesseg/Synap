@@ -1,4 +1,4 @@
-import { Component, viewChild } from '@angular/core';
+import { Component, output, viewChild } from '@angular/core';
 import {EuclidesEditorComponent} from 'euclides-editor'
 
 @Component({
@@ -10,4 +10,7 @@ export class EditorComponent {
 
   editor = viewChild(EuclidesEditorComponent)
 
+  getContent(){
+    return this.editor()?.getDoc();
+  }
  }

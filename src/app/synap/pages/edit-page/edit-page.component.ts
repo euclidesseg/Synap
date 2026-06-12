@@ -1,9 +1,11 @@
 import { Component, AfterViewInit, signal, inject, Renderer2, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { EditorComponent } from "../../components/editor-component/editor-component";
+import { JsonPipe } from '@angular/common';
 import { FormArray, FormBuilder, FormControl, ReactiveFormsModule, Validators } from "@angular/forms";
+
+import { EditorComponent } from "../../components/editor-component/editor-component";
 import { IconComponent } from "../../../shared/components/icon/icon.component";
 import { categories } from '../../data/categories.data';
-import { JsonPipe } from '@angular/common';
+import { FormUtils } from '../../../shared/utils/form-utils';
 
 
 @Component({
@@ -16,9 +18,14 @@ import { JsonPipe } from '@angular/common';
 })
 export default class EditPageComponent implements AfterViewInit, OnDestroy {
 
+
   private renderer = inject(Renderer2);
   private elementRef = inject(ElementRef);
   categoryOptions = signal(categories)
+  formUtils = FormUtils;
+
+  @ViewChild(EditorComponent)
+  editorComponent!: EditorComponent;
 
   @ViewChild('inputCategory')
   inputCategory!: ElementRef<HTMLInputElement>;
@@ -62,14 +69,18 @@ export default class EditPageComponent implements AfterViewInit, OnDestroy {
 
   // Definición del formularlio para el articulo
   articleForm = this.fBuilder.group({
-    title: ['', [Validators.required]],
-    summary:['', [Validators.required, Validators.maxLength(200)]],
+    title: ['', [Validators.required, Validators.minLength(20)]],
+    summary: ['', [Validators.required, Validators.maxLength(200), Validators.minLength(50)]],
     category: ['', [Validators.required]],
-    visibility:['Public',[Validators.required]],
-    labels: this.fBuilder.array([ ], [Validators.minLength(2)])
+    visibility: ['Public', [Validators.required]],
+    labels: this.fBuilder.array([], [Validators.minLength(2)]),
+    contentJson: [null, [Validators.required]],
+    contentHtml: ['', [Validators.required]],
+    wordCount: [0],
+    readingTime: [0]
   });
 
-  // Obtiene loe elementos del formaray para manipularlos
+  // Obtiene los elementos del formaray para manipularlos
   get labels() {
     return this.articleForm.get('labels') as FormArray;
   }
@@ -92,6 +103,24 @@ export default class EditPageComponent implements AfterViewInit, OnDestroy {
   selectOption(option: string) {
     this.articleForm.get('category')?.setValue(option);
     this.menuOpen.set(false);
+  }
+
+  onSubmit() {
+
+    const doc = this.editorComponent.getContent();
+    this.articleForm.patchValue({
+      contentJson: doc?.json,
+      contentHtml: doc?.html,
+      wordCount: doc?.wordCount,
+      readingTime: doc?.readingTime
+    });
+
+    if (this.articleForm.invalid) {
+      this.articleForm.markAllAsTouched();
+      return;
+    }
+
+    console.log(this.articleForm.getRawValue());
   }
 
 } 
