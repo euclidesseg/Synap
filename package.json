@@ -42,7 +42,7 @@
     "@angular/compiler-cli": "^22.2.3",
     "daisyui": "^5.7.50",
     "jsdom": "^27.4.0",
-    "typescript": "~5.9.3",
+    "typescript": "~6.0.3",
     "vitest": "^4.1.12"
   }
 }
